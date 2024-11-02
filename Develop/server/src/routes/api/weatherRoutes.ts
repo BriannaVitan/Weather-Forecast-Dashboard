@@ -1,6 +1,7 @@
 import { Router, type Request, type Response } from 'express';
 import dotenv from 'dotenv';
 import WeatherService from '../../service/weatherService.js';
+import HistoryService from '../../service/historyService.js';
 
 dotenv.config();
 const router = Router();
@@ -21,6 +22,9 @@ router.post('/', async (req: Request, res: Response) => {
     }
 
     const weatherData = await WeatherService.getWeatherForCity(cityName);
+    if (weatherData) {
+      HistoryService.addCity(cityName)
+    }
       return res.send(JSON.stringify(weatherData));
 
     // TODO: save city to search history
@@ -33,12 +37,14 @@ router.post('/', async (req: Request, res: Response) => {
 // GET search history
 router.get('/history', async (_req: Request, res: Response) => {
   try {
-    console.log('search history');
+    console.log('history Service');
+    let data = await HistoryService.getCities()
+    return res.json(data) 
     // TODO: Implement logic to retrieve search history
-    res.send({ history: [] }); // Placeholder response
+    // res.send({ history: [] }); // Placeholder response
   } catch (error) {
     console.error(error);
-    res.status(500).send({ error: "Failed to retrieve search history" });
+    return res.status(500).send({ error: "Failed to retrieve search history" });
   }
 });
 
