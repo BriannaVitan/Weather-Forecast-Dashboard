@@ -1,5 +1,4 @@
 import dotenv from 'dotenv';
-// import { v4 as uuid } from 'uuid';
 dotenv.config();
 
 // TODO: Define an interface for the Coordinates object
