@@ -1,9 +1,10 @@
 ![Static Badge](https://img.shields.io/badge/MIT-license-yellow)
-## Weather-forecast
+## Weather Forecast Dashboard
+
 
 ## Description
 
-Welcome to my Weather forecast dashboard!
+Welcome to my Weather Forecast Dashboard!
 This project is my Weather city forecast for 5days in a variety of cities. This app retrevies data from a weather API. The front end was completed while I worked on the backend porotion using servers. Api's, Node.js, and Render.
 
 ## Table of Contents 
@@ -17,11 +18,11 @@ This project is my Weather city forecast for 5days in a variety of cities. This 
 ## Installation
 
 To use the weather App, please follow these steps:
-1. Clone the Repo at git clone 
+1. Clone the Repo at git clone at https://github.com/BriannaVitan/Weather-forecast.git
 2. Navigate to the project directory
 3. Install: npm install
-4. Start the sever: npm start dev
-5. Open your web browser, if not, navigate to  http://localhost:3001 to view the app.
+4. Start the sever: npm run start:dev
+5. The browser should pop on your web browser, if not, navigate to your web browser and paste http://localhost:3001 to view the app.
 
 ## Usage
 
@@ -37,4 +38,4 @@ Contributions are welcomed and greatly appreciated. If you have a suggestion, pl
 
 ## Questions
 
-If you have any additional questions, please reach me at 
+If you have any additional questions, please reach me at https://github.com/BriannaVitan/Weather-forecast.git

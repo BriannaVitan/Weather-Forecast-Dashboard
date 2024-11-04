@@ -30,7 +30,7 @@ router.post('/', async (req: Request, res: Response) => {
     // TODO: save city to search history
   } catch (error) {
     console.error(error);
-      return res.status(500).send({ error: "Failed to retrieve weather data" });
+      return res.status(400).send({ error: "Failed to retrieve weather data" });
   }
 });
 
